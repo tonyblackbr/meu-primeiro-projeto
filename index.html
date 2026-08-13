@@ -31,16 +31,26 @@
     .convite h2{font-family:Georgia,serif;color:var(--terra);font-size:clamp(2.4rem,5vw,4rem);line-height:1.05;margin-bottom:20px}
     .lista{display:grid;gap:14px}.item{background:var(--branco);border-radius:18px;padding:18px 20px;display:flex;gap:14px;align-items:center}
     .item b{color:var(--oliva)}
+    .catalogo{background:var(--branco)}
+    .catalogo.delicias{background:#f2e5d3}
+    .produtos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .produto{overflow:hidden;background:var(--creme);border:1px solid rgba(88,96,46,.14);border-radius:25px;box-shadow:0 12px 35px rgba(63,43,35,.07)}
+    .produto-foto{height:210px;display:grid;place-items:center;background:linear-gradient(135deg,#e9dec8,#fff8ed);font-size:4.3rem}
+    .delicias .produto-foto{background:linear-gradient(135deg,#efd2b9,#fff3e5)}
+    .produto-info{padding:23px}.produto-info h3{color:var(--oliva);font-size:1.35rem}.produto-info p{margin:8px 0 17px}
+    .preco{display:block;color:var(--terra);font-size:1.15rem;font-weight:800;margin-bottom:14px}
+    .interesse{display:inline-block;padding:10px 17px;border:2px solid var(--terra);border-radius:999px;color:var(--terra);font-weight:800;text-decoration:none}
+    .aviso{margin:32px auto 0;text-align:center;color:var(--oliva);font-weight:700}
     footer{background:var(--marrom);color:#f8ead7;text-align:center;padding:38px 24px}footer strong{color:#f0a16f}
-    @media(max-width:800px){nav ul{display:none}.hero,.convite-grid{grid-template-columns:1fr}.hero{text-align:center;padding-top:45px}.hero img{order:-1;max-width:390px;margin:auto}.cards{grid-template-columns:1fr 1fr}}
-    @media(max-width:520px){.cards{grid-template-columns:1fr}section{padding:65px 20px}}
+    @media(max-width:800px){nav{align-items:flex-start;gap:18px}nav ul{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:8px 14px;font-size:.88rem}.hero,.convite-grid{grid-template-columns:1fr}.hero{text-align:center;padding-top:45px}.hero img{order:-1;max-width:390px;margin:auto}.cards,.produtos-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:520px){nav{display:block}.marca{text-align:center;margin-bottom:10px}nav ul{justify-content:center}.cards,.produtos-grid{grid-template-columns:1fr}section{padding:65px 20px}}
   </style>
 </head>
 <body>
   <header>
     <nav>
       <div class="marca">TENDA <span>EIS-ME AQUI</span></div>
-      <ul><li><a href="#missao">Missão</a></li><li><a href="#significado">Nossa essência</a></li><li><a href="#participar">Participar</a></li></ul>
+      <ul><li><a href="#">Início</a></li><li><a href="#produtos">Produtos</a></li><li><a href="#delicias">Delícias</a></li><li><a href="#missao">Missão</a></li><li><a href="#participar">Participar</a></li></ul>
     </nav>
   </header>
 
@@ -68,6 +78,31 @@
           <article class="card"><div class="icone">🌿</div><h3>As folhas</h3><p>Vida, cuidado e a beleza de florescer juntos.</p></article>
           <article class="card"><div class="icone">🚩</div><h3>A bandeira</h3><p>Propósito, direção e um caminho a seguir.</p></article>
         </div>
+      </div>
+    </section>
+
+
+    <section class="catalogo" id="produtos">
+      <div class="conteudo">
+        <div class="titulo"><span class="tag">Catálogo</span><h2>Produtos da Tenda</h2><p>Bíblias e presentes escolhidos com carinho. Em breve, colocaremos aqui as fotos e informações reais.</p></div>
+        <div class="produtos-grid">
+          <article class="produto"><div class="produto-foto">📖</div><div class="produto-info"><h3>Bíblia especial</h3><p>Espaço reservado para descrição, versão, cor e tamanho.</p><span class="preco">Preço em breve</span><a class="interesse" href="#participar">Tenho interesse</a></div></article>
+          <article class="produto"><div class="produto-foto">📚</div><div class="produto-info"><h3>Bíblia de estudo</h3><p>Espaço reservado para detalhes e diferenciais do produto.</p><span class="preco">Preço em breve</span><a class="interesse" href="#participar">Tenho interesse</a></div></article>
+          <article class="produto"><div class="produto-foto">🎁</div><div class="produto-info"><h3>Presentes com propósito</h3><p>Um espaço para kits, lembranças e outros produtos da Tenda.</p><span class="preco">Preço em breve</span><a class="interesse" href="#participar">Tenho interesse</a></div></article>
+        </div>
+        <p class="aviso">Modelo inicial — fotos, preços e pedidos serão adicionados depois.</p>
+      </div>
+    </section>
+
+    <section class="catalogo delicias" id="delicias">
+      <div class="conteudo">
+        <div class="titulo"><span class="tag">Feito com carinho</span><h2>Delícias da Tenda</h2><p>Sabores preparados com carinho para abençoar vidas.</p></div>
+        <div class="produtos-grid">
+          <article class="produto"><div class="produto-foto">🥟</div><div class="produto-info"><h3>Pastel</h3><p>Escolha seus sabores. Em breve, descrição e foto reais.</p><span class="preco">Preço em breve</span><a class="interesse" href="#participar">Tenho interesse</a></div></article>
+          <article class="produto"><div class="produto-foto">🌽</div><div class="produto-info"><h3>Pamonha</h3><p>Uma delícia tradicional preparada com muito carinho.</p><span class="preco">Preço em breve</span><a class="interesse" href="#participar">Tenho interesse</a></div></article>
+          <article class="produto"><div class="produto-foto">🧀</div><div class="produto-info"><h3>Queijo</h3><p>Espaço para informar tipo, peso, origem e disponibilidade.</p><span class="preco">Preço em breve</span><a class="interesse" href="#participar">Tenho interesse</a></div></article>
+        </div>
+        <p class="aviso">Novas delícias poderão ser acrescentadas facilmente.</p>
       </div>
     </section>
 
